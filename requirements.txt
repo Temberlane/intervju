@@ -1,6 +1,9 @@
 opencv-python
 ultralytics
-
+hsemotion-onnx>=0.3.1         # EfficientNet emotion models :contentReference[oaicite:11]{index=11}
+onnxruntime>=1.21             # inference engine with 3.13 wheels :contentReference[oaicite:12]{index=12}
+opencv-python>=4.8            # video I/O & drawing
+numpy>=1.26
 google-genai
 python-dotenv
 httpx
