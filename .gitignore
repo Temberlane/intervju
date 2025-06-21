@@ -2,3 +2,5 @@
 venv
 
 .env
+frontend/intervju-frontend/node_modules
+backend/node_modules
