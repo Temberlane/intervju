@@ -1,0 +1,8 @@
+{
+    "build": {
+      "root": "intervju/backend"
+    },
+  "scripts": {
+  "start": "node server.js"
+}
+}
