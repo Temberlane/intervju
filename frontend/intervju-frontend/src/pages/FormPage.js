@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./FormPage.css";
 import { useNavigate } from "react-router-dom";
 
-
 export default function FormPage() {
   const [step, setStep] = useState(1);
   const [resume, setResume] = useState(null);
@@ -11,9 +10,8 @@ export default function FormPage() {
   const [status, setStatus] = useState("");
 
   const navigate = useNavigate();
-  
-  const handleSubmit = async (e) => {
 
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!resume) {
@@ -34,7 +32,6 @@ export default function FormPage() {
 
       if (response.ok) {
         navigate("/loading");
-
         setStep(1);
         setResume(null);
         setJobDescription("");
@@ -60,58 +57,74 @@ export default function FormPage() {
 
       <h2>Submit Your Info</h2>
       <p className="form-subtext">
-        Provide us with more information about your interview. The more info we have, the better our AI bot can give you a more professional and real interview question.
+        Provide us with more information about your interview. The more info we
+        have, the better our AI bot can give you a more professional and real
+        interview question.
       </p>
 
       <form className="form-box" onSubmit={handleSubmit}>
-        {step === 1 && (
-          <label className="form-label">
-            Resume Upload
-            <div className="upload-card">
-              <input
-                type="file"
-                accept=".pdf,.doc,.docx"
-                onChange={(e) => setResume(e.target.files[0])}
-                required
-              />
-            </div>
-          </label>
-        )}
-
-        {step === 2 && (
-          <label className="form-label">
-            Job Description
-            <textarea
-              className="text-input"
-              value={jobDescription}
-              onChange={(e) => setJobDescription(e.target.value)}
-              rows={6}
-              required
+        {/* Resume Upload - always rendered, hidden when not current step */}
+        <label
+          className="form-label"
+          style={{ display: step === 1 ? "block" : "none" }}
+        >
+          Resume Upload
+          <div className="upload-card">
+            <input
+              type="file"
+              accept=".pdf,.doc,.docx"
+              onChange={(e) => setResume(e.target.files[0])}
+              required={step === 1}
             />
-          </label>
-        )}
+          </div>
+        </label>
 
-        {step === 3 && (
-          <label className="form-label">
-            Additional Notes (optional)
-            <textarea
-              className="text-input"
-              value={notes}
-              onChange={(e) => setNotes(e.target.value)}
-              rows={4}
-            />
-          </label>
-        )}
+        {/* Job Description */}
+        <label
+          className="form-label"
+          style={{ display: step === 2 ? "block" : "none" }}
+        >
+          Job Description
+          <textarea
+            className="text-input"
+            value={jobDescription}
+            onChange={(e) => setJobDescription(e.target.value)}
+            rows={6}
+            required={step === 2}
+          />
+        </label>
+
+        {/* Additional Notes */}
+        <label
+          className="form-label"
+          style={{ display: step === 3 ? "block" : "none" }}
+        >
+          Additional Notes (optional)
+          <textarea
+            className="text-input"
+            value={notes}
+            onChange={(e) => setNotes(e.target.value)}
+            rows={4}
+          />
+        </label>
 
         <div className="form-buttons">
           {step > 1 && (
-            <button type="button" className="nav-btn" onClick={() => setStep(step - 1)}>
+            <button
+              type="button"
+              className="nav-btn"
+              onClick={() => setStep(step - 1)}
+            >
               Back
             </button>
           )}
 
           {step < 3 && (
-            <button type="button" className="nav-btn" onClick={() => setStep(step + 1)}>
+            <button
+              type="button"
+              className="nav-btn"
+              onClick={() => setStep(step + 1)}
+            >
               Next
             </button>
           )}

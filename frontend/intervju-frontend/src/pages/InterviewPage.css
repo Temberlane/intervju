@@ -1,44 +1,33 @@
-
-
-/* Main content wrapper - fills viewport minus footer */
 .interview-wrapper {
-  padding-top: 0px;
-
-/*  width: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 20px;  
-  padding-bottom: 20px;
+  align-items: center;
   background-color: var(--background, #f9fafb);
-  box-sizing: border-box; */
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
-
-
-
-/* Container box with border */
 .interview-container {
-  padding-top: 0px;     /* No extra space */
-  margin-top: 0;
-  /*
-  width: 95%;
-  max-width: 1400px;
-  height: 400px; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interview-box {
+  width: 100%;
+  max-width: 1600px;     /* Increased max-width */
+  min-height: 600px;
   border: 4px solid #6366f1;
   border-radius: 12px;
   background-color: white;
-  padding: 24px; 
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; */
-}
-
-
-
-
-/* Footer should be fixed height */
-footer {
-  flex-shrink: 0;
-  height: 80px; /* or your footer height */
+  padding: 32px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
