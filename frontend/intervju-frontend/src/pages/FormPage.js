@@ -25,7 +25,7 @@ export default function FormPage() {
     formData.append("notes", notes);
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL || "https://intervju-backend.up.railway.app"}/submit`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/submit`, {
         method: "POST",
         body: formData,
       });
