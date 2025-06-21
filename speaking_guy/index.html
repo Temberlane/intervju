@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Steve Jobs Avatar</title>
+  <script src="https://unpkg.com/@rive-app/canvas@2.11.1"></script>
+  <style>
+    body {
+      background: #f4a825;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+    }
+    canvas {
+      width: 300px;
+      height: 300px;
+    }
+    .controls {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+    }
+    button {
+      padding: 10px 15px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="riveCanvas" width="500" height="500"></canvas>
+
+  <div class="controls">
+    <button onclick="toggleInput('glasses toggle')">Toggle Glasses</button>
+    <button onclick="toggleInput('smile toggle')">Toggle Smile</button>
+    <button onclick="toggleInput('blush toggle')">Toggle Blush</button>
+  </div>
+
+  <script>
+    let inputs = {};
+
+    const riveInstance = new rive.Rive({
+      src: "steve1.riv", // Make sure this matches your file name
+      canvas: document.getElementById("riveCanvas"),
+      autoplay: true,
+      stateMachines: ["State Machine 1", "glasses", "smile", "blushes"], // Default name for state machine in community files
+      onLoad: () => {
+  const stateMachinesToLoad = ["State Machine 1", "glasses", "smile", "blushes"];
+  for (let sm of stateMachinesToLoad) {
+    const smInputs = riveInstance.stateMachineInputs(sm);
+    if (!smInputs) {
+      console.warn(`State machine "${sm}" not found.`);
+      continue;
+    }
+    for (let input of smInputs) {
+      inputs[input.name] = input;
+    }
+  }
+  console.log("Loaded inputs:", Object.keys(inputs));
+}
+    });
+
+    function toggleInput(inputName) {
+      const input = inputs[inputName];
+      if (input && input.type === "trigger") {
+        input.fire();
+      } else if (input && input.type === "boolean") {
+        input.value = !input.value;
+      }
+    }
+  </script>
+</body>
+</html>

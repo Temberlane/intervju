@@ -2,3 +2,5 @@ opencv-python
 ultralytics
 
 google-genai
+python-dotenv
+httpx
