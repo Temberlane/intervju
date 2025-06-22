@@ -16,30 +16,13 @@ export default function InterviewPage() {
 
   return (
     <div className="interview-wrapper">
-      <div className="interview-box">
-        <div className="left-panel">
-          <div className="user-recording">
-            <p>AI Avatar</p>
-            <div style={{ textAlign: "center", paddingTop: 50 }}>
-              <RiveComponent style={{ width: 400, height: 400 }} />
-              <button onClick={() => smileToggle && (smileToggle.value = !smileToggle.value)}>
-                Toggle Smile
-              </button>
-              <div>
-                <h1>Interview Question</h1>
-                <p>Why do you want to work here?</p>
-        
-              </div>
-            </div>
-            <div className="ai-avatar">
-              <p>User Recording</p>
-            </div>
-          </div>
+      <div className="interview-container no-transcript">
+        <div className="user-recording">
+          <h2>User Recording View</h2>
+          <p>Camera feed will appear here.</p>
         </div>
-
-        <div className="right-panel">
-          <h3>Transcript</h3>
-          <p>Interview chat messages will appear here.</p>
+        <div className="ai-avatar">
+          <p>🤖 AI Avatar</p>
         </div>
       </div>
     </div>
