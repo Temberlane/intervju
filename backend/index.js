@@ -8,6 +8,25 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+//Computer Vision Stuff
+const { spawn } = require("child_process");
+
+app.get("/run2/:arg", (req, res) => {
+  const py = spawn("python", ["VideoCapture.py", req.params.arg]);
+  let output = "";
+
+  py.stdout.on("data", data => output += data.toString());
+  py.stderr.on("data", err => console.error(err.toString()));
+
+  py.on("close", code => {
+    if (code === 0) {
+      res.send(output);
+    } else {
+      res.status(500).send("Exited with code " + code);
+    }
+  });
+});
+
 // Middleware
 app.use(cors());
 app.use(express.json());

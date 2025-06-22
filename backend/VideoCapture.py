@@ -1,7 +1,7 @@
 from multiprocessing.spawn import import_main_path
 import numpy as np
 import cv2
-from cv2 import VideoCapture, waitKey, destroyAllWindows
+from cv2 import VideoCapture
 from hsemotion_onnx.facial_emotions import HSEmotionRecognizer
 from ultralytics import YOLO
 import json
@@ -12,7 +12,6 @@ class frameCapture:
     def __init__(self, maxDrop):
         isSlouched = False
         expression = ""
-        capture = VideoCapture(0)
         ultralyticsModel = YOLO("yolo11m-pose.pt")
         emotionalModel = HSEmotionRecognizer(model_name="enet_b0_8_best_afew")
         net = cv2.dnn.readNetFromCaffe("deploy.prototxt", "res10_300x300_ssd_iter_140000_fp16.caffemodel")
@@ -36,7 +35,6 @@ class frameCapture:
     def captureFrame(maxDrop):
         isSlouched = False
         expression = ""
-        capture = VideoCapture(0)
         ultralyticsModel = YOLO("yolo11m-pose.pt")
         emotionalModel = HSEmotionRecognizer(model_name="enet_b0_8_best_afew")
         net = cv2.dnn.readNetFromCaffe("deploy.prototxt", "res10_300x300_ssd_iter_140000_fp16.caffemodel")
@@ -47,8 +45,7 @@ class frameCapture:
         SKELETON = [
             (6, 8), (8, 10), (5, 7), (7, 9)
         ]
-        capture = frameCapture.startVideoCapture()
-        validCapture, frame = capture.read()
+        frame = cv2.imread("happy.jpg")
         # Use model to get results and add those to a flattened keypoint 2d map
         results = ultralyticsModel.predict(frame, conf=0.25, verbose=False)
         keyPoints = results[0].keypoints.xy
@@ -94,7 +91,6 @@ class frameCapture:
             #conf_emotion = float(scores[order.index(label.lower())])
             expression = label
             break
-        capture.release()
         outputDict = {
             "isSlouched" : isSlouched,
             "expression" : expression
@@ -112,3 +108,4 @@ class frameCapture:
         # cv2.imshow("Keypoints", vis)
         # ------------------FRAME RENDERING-----------------
 
+print(frameCapture.captureFrame(0.45))
