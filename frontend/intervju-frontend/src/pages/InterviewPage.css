@@ -1,7 +1,8 @@
 .interview-wrapper {
+  width: 100%; /* Take up full width of container */
   min-height: 100vh;
   background-color: var(--background, #f9fafb);
-  padding: 1rem; /* Reduced padding */
+  padding: 0; /* Remove padding to use full container width */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +10,7 @@
 }
 
 .interview-box {
-  width: 95vw; /* Nearly full viewport width */
+  width: 100%; /* Use full wrapper width */
   height: 90vh; /* Nearly full viewport height */
   max-width: none; /* Remove max-width constraint */
   display: flex;
