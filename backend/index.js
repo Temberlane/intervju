@@ -17,21 +17,23 @@ const PORT = process.env.PORT || 5000;
 //Computer Vision Stuff
 const { spawn } = require("child_process");
 
-app.get("/run2/:arg", (req, res) => {
-  const py = spawn("python", ["VideoCapture.py", req.params.arg]);
+app.get("/run2", (req, res) => {
+  const py = spawn("python", ["VideoCapture.py"]); // No arguments!
   let output = "";
+  let errorOutput = "";
 
   py.stdout.on("data", data => output += data.toString());
-  py.stderr.on("data", err => console.error(err.toString()));
+  py.stderr.on("data", err => errorOutput += err.toString());
 
   py.on("close", code => {
     if (code === 0) {
       res.send(output);
     } else {
-      res.status(500).send("Exited with code " + code);
+      res.status(500).send(errorOutput || ("Exited with code " + code));
     }
   });
 });
+
 
 // === Middleware ===
 app.use(cors({
