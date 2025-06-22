@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 5000;
 const { spawn } = require("child_process");
 
 app.get("/run2", (req, res) => {
-  const py = spawn("python3", ["VideoCapture.py"]); // No arguments!
+  const py = spawn("python3", [path.join(__dirname, "../VideoCapture.py")]); // No arguments!
   let output = "";
   let errorOutput = "";
 
@@ -62,7 +62,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // === Mongoose Model ===
-const Form = require("./models/FormModel");
+const Form = require("../models/FormModel");
 
 // === Routes ===
 app.post("/submit", upload.single("resume"), async (req, res) => {
