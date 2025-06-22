@@ -172,13 +172,15 @@ app.post("/submit", upload.single("resume"), async (req, res) => {
 // === Generate Questions Route ===
 app.post("/generate-questions", async (req, res) => {
   try {
-    const { resumePath, jobInfoPath, minutes } = req.body;
+    // Safety check for req.body
+    const { resumePath, jobInfoPath, minutes } = req.body || {};
     
     // Use uploaded files or default paths
     const actualResumePath = resumePath || path.join(__dirname, 'uploads', 'Resume.pdf');
     const actualJobInfoPath = jobInfoPath || path.join(__dirname, 'uploads', 'Ciena_Embedded_Software_Internship.txt');
     const actualMinutes = minutes || 30;
     
+    console.log(`Request body:`, req.body);
     console.log(`Generating questions for resume: ${actualResumePath}, job: ${actualJobInfoPath}, duration: ${actualMinutes} minutes`);
     
     const questions = await generateQuestions(actualResumePath, actualJobInfoPath, actualMinutes);
