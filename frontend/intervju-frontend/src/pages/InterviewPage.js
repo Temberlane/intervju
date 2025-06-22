@@ -16,7 +16,7 @@ export default function InterviewPage() {
 
   return (
     <div className="interview-wrapper">
-      <div className="interview-container no-transcript">
+      <div className="interview-container">
         <div className="user-recording">
           <h2>User Recording View</h2>
           <p>Camera feed will appear here.</p>

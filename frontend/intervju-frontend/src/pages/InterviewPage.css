@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-.interview-container.no-transcript {
+.interview-container {
   width: 95%;
   max-width: 1400px;
   min-height: 600px;
