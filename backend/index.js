@@ -77,7 +77,7 @@ app.post("/generate-questions", async (req, res) => {
 
 
 //Computer Vision Stuff
-const { spawn } = require("child_process");
+// const { spawn } = require("child_process");
 
 app.get("/run2", (req, res) => {
   const py = spawn("python3", [path.join(__dirname, "../test.py")]); // No arguments!
