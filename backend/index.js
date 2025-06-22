@@ -5,6 +5,9 @@ const cors = require("cors");
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
+const util = require("util");
+const bodyParser = require("body-parser");
+
 
 // Create uploads directory if it doesn't exist
 if (!fs.existsSync("uploads")) {
@@ -12,7 +15,66 @@ if (!fs.existsSync("uploads")) {
 }
 
 const app = express();
+app.use(cors());
+app.use(bodyParser.json());
 const PORT = process.env.PORT || 5000;
+
+
+// stuff for the gen
+const { spawn } = require("child_process");
+const path = require("path");
+
+// Add this endpoint to your server.js
+app.post("/generate-questions", async (req, res) => {
+  try {
+    const { resumePath, jobInfoPath, minutes } = req.body;
+    
+    // Spawn Python process
+    const pythonProcess = spawn("python3", [
+      path.join(__dirname, "../interviewGeneration.py"),
+      resumePath || "uploads/Resume.pdf",
+      jobInfoPath || "uploads/Ciena_Embedded_Software_Internship.txt",
+      minutes || 30
+    ]);
+    
+    let outputData = "";
+    let errorData = "";
+    
+    // Collect data from script
+    pythonProcess.stdout.on("data", (data) => {
+      outputData += data.toString();
+    });
+    
+    pythonProcess.stderr.on("data", (data) => {
+      errorData += data.toString();
+    });
+    
+    // Handle process completion
+    pythonProcess.on("close", (code) => {
+      if (code !== 0) {
+        console.error(`Python script exited with code ${code}`);
+        console.error(`Error output: ${errorData}`);
+        return res.status(500).json({ error: "Failed to generate questions", details: errorData });
+      }
+      
+      try {
+        // Parse the output into a suitable format
+        const questions = JSON.parse(outputData);
+        res.json({ questions });
+      } catch (err) {
+        console.error("Failed to parse Python output:", err);
+        res.status(500).json({ 
+          error: "Failed to parse questions output",
+          rawOutput: outputData
+        });
+      }
+    });
+  } catch (err) {
+    console.error("Error running Python script:", err);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 
 //Computer Vision Stuff
 const { spawn } = require("child_process");
