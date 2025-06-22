@@ -4,6 +4,12 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const multer = require("multer");
 const path = require("path");
+const fs = require("fs");
+
+// Create uploads directory if it doesn't exist
+if (!fs.existsSync("uploads")) {
+  fs.mkdirSync("uploads");
+}
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -27,57 +33,54 @@ app.get("/run2/:arg", (req, res) => {
   });
 });
 
-// Middleware
-app.use(cors());
+// === Middleware ===
+app.use(cors({
+  origin: "https://www.intervju.work", // ✅ Restrict to your frontend domain
+  credentials: true,
+}));
 app.use(express.json());
-app.use("/uploads", express.static("uploads"));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// MongoDB connection
-mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("✅ MongoDB connected"))
-  .catch((err) => console.error("MongoDB connection error:", err));
+// === MongoDB Connection ===
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log("✅ MongoDB connected"))
+.catch((err) => console.error("❌ MongoDB connection error:", err));
 
-// Multer storage config (store resume file in uploads/)
+// === Multer Config ===
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, "uploads/"),
   filename: (req, file, cb) => {
     const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-    cb(null, uniqueSuffix + "-" + file.originalname);
-  },
+    cb(null, `${uniqueSuffix}-${file.originalname}`);
+  }
 });
 const upload = multer({ storage });
 
-// Define model
+// === Mongoose Model ===
 const Form = require("./models/FormModel");
 
-// POST endpoint to handle form submission
+// === Routes ===
 app.post("/submit", upload.single("resume"), async (req, res) => {
   try {
     const { jobDescription, notes } = req.body;
-    const resumePath = req.file ? req.file.path : null;
+    const resumePath = req.file?.path || null;
 
-    const newForm = new Form({
-      jobDescription,
-      notes,
-      resumePath,
-    });
-
+    const newForm = new Form({ jobDescription, notes, resumePath });
     await newForm.save();
 
-    res.status(200).json({ message: "Form submitted successfully!" });
+    res.status(200).json({ message: "✅ Form submitted successfully!" });
   } catch (err) {
-    console.error("Error submitting form:", err);
-    res.status(500).json({ error: "Server error" });
+    console.error("❌ Error submitting form:", err);
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 
-// Start server
+// === Start Server ===
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Server is live on port ${PORT}`);
 });
 
 

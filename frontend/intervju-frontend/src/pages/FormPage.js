@@ -25,7 +25,7 @@ export default function FormPage() {
     formData.append("notes", notes);
 
     try {
-      const response = await fetch("http://localhost:5000/submit", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/submit`, {
         method: "POST",
         body: formData,
       });
