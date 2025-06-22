@@ -20,8 +20,7 @@
   overflow: hidden;
 }
 
-
-.user-recording {
+.ai-avatar {
   width: 100%;
   height: 100%;
   background-color: rgb(244, 190, 83); /* Changed to specified color */
@@ -35,68 +34,13 @@
   font-weight: 600;
 }
 
-/* AI avatar positioned bottom-left inside user recording */
-.ai-avatar {
+/* Interviewee positioned bottom-left inside ai avatar */
+.interviewee {
   position: absolute;
   bottom: 16px;
   left: 16px;
-  width: 200px;
-  height: 200x;
-  background-color: #6366f1; /* dark purple */
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.6);
-  user-select: none;
-}
-
-.interview-wrapper {
-  min-height: 100vh;
-  background-color: var(--background, #f9fafb);
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-.interview-box {
-  width: 100%;
-  max-width: 1600px;
-  height: 600px;
-  display: flex;
-  border: 4px solid #6366f1; /* purplish border */
-  border-radius: 12px;
-  background-color: white;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-
-.user-recording {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(244, 190, 83); /* Changed to specified color */
-  border-radius: 8px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  color: #4b47b5;
-  font-weight: 600;
-}
-
-/* AI avatar positioned bottom-left inside user recording */
-.ai-avatar {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  width: 160px;
-  height: 160px;
+  width: 320px;
+  aspect-ratio: 16 / 9; /* This automatically calculates height */
   background-color: #6366f1; /* dark purple */
   border-radius: 8px;
   color: white;
