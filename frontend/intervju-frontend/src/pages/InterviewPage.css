@@ -1,33 +1,178 @@
+
+
 .interview-wrapper {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--background, #f9fafb);
   padding: 2rem;
-  box-sizing: border-box;
-}
-
-.interview-container {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .interview-box {
   width: 100%;
-  max-width: 1600px;     /* Increased max-width */
-  min-height: 600px;
-  border: 4px solid #6366f1;
+  max-width: 1600px;
+  height: 600px;
+  display: flex;
+  border: 4px solid #6366f1; /* purplish border */
   border-radius: 12px;
   background-color: white;
-  padding: 32px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.left-panel {
+  width: 75%;
+  position: relative;
+  background-color: #e7e9ff; /* light purple background for demo */
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
 }
+
+.user-recording {
+  width: 100%;
+  height: 100%;
+  background-color: #d0d3ff; /* slightly darker purple */
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #4b47b5;
+  font-weight: 600;
+}
+
+/* AI avatar positioned bottom-left inside user recording */
+.ai-avatar {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  width: 200px;
+  height: 200x;
+  background-color: #6366f1; /* dark purple */
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.6);
+  user-select: none;
+}
+
+.right-panel {
+  width: 25%;
+  background-color: #f4f5ff; /* very light purple */
+  border-left: 3px solid #6366f1;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.right-panel h3 {
+  margin-top: 0;
+  color: #4b47b5;
+  font-weight: 700;
+}
+
+.right-panel p {
+  margin-top: 0.5rem;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.interview-wrapper {
+  min-height: 100vh;
+  background-color: var(--background, #f9fafb);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.interview-box {
+  width: 100%;
+  max-width: 1600px;
+  height: 600px;
+  display: flex;
+  border: 4px solid #6366f1; /* purplish border */
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.left-panel {
+  width: 75%;
+  position: relative;
+  background-color: #e7e9ff; /* light purple background for demo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.user-recording {
+  width: 100%;
+  height: 100%;
+  background-color: #d0d3ff; /* slightly darker purple */
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #4b47b5;
+  font-weight: 600;
+}
+
+/* AI avatar positioned bottom-left inside user recording */
+.ai-avatar {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  width: 160px;
+  height: 160px;
+  background-color: #6366f1; /* dark purple */
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.6);
+  user-select: none;
+}
+
+.right-panel {
+  width: 25%;
+  background-color: #f4f5ff; /* very light purple */
+  border-left: 3px solid #6366f1;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.right-panel h3 {
+  margin-top: 0;
+  color: #4b47b5;
+  font-weight: 700;
+}
+
+.right-panel p {
+  margin-top: 0.5rem;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
 
