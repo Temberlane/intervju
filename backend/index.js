@@ -80,7 +80,7 @@ app.post("/generate-questions", async (req, res) => {
 const { spawn } = require("child_process");
 
 app.get("/run2", (req, res) => {
-  const py = spawn("python3", [path.join(__dirname, "../VideoCapture.py")]); // No arguments!
+  const py = spawn("python3", [path.join(__dirname, "../test.py")]); // No arguments!
   let output = "";
   let errorOutput = "";
 
