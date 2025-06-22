@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 5000;
 const { spawn } = require("child_process");
 
 app.get("/run2", (req, res) => {
-  const py = spawn("python", ["VideoCapture.py"]); // No arguments!
+  const py = spawn("python3", ["VideoCapture.py"]); // No arguments!
   let output = "";
   let errorOutput = "";
 
