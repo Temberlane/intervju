@@ -63,28 +63,6 @@
   user-select: none;
 }
 
-.right-panel {
-  width: 25%;
-  background-color: #f4f5ff; /* very light purple */
-  border-left: 3px solid #6366f1;
-  padding: 1rem;
-  box-sizing: border-box;
-  overflow-y: auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.right-panel h3 {
-  margin-top: 0;
-  color: #4b47b5;
-  font-weight: 700;
-}
-
-.right-panel p {
-  margin-top: 0.5rem;
-  color: #333;
-  font-size: 1rem;
-  line-height: 1.4;
-}
 .interview-wrapper {
   min-height: 100vh;
   background-color: var(--background, #f9fafb);

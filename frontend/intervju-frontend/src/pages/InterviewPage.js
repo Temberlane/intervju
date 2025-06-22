@@ -26,11 +26,7 @@ export default function InterviewPage() {
           </div>
         </div>
 
-        <div className="right-panel">
-          {/* Placeholder for transcript/chat */}
-          <h3>Transcript</h3>
-          <p>Interview chat messages will appear here.</p>
-        </div>
+    
       </div>
     </div>
   );
