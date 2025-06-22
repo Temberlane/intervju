@@ -20,16 +20,6 @@
   overflow: hidden;
 }
 
-.left-panel {
-  width: 75%;
-  position: relative;
-  background-color: #e7e9ff; /* light purple background for demo */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  box-sizing: border-box;
-}
 
 .user-recording {
   width: 100%;
@@ -85,16 +75,6 @@
   overflow: hidden;
 }
 
-.left-panel {
-  width: 75%;
-  position: relative;
-  background-color: #e7e9ff; /* light purple background for demo */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  box-sizing: border-box;
-}
 
 .user-recording {
   width: 100%;

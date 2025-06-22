@@ -14,7 +14,6 @@ export default function InterviewPage() {
   return (
     <div className="interview-wrapper">
       <div className="interview-box">
-        <div className="left-panel">
           <div className="user-recording">
             {/* Rive Avatar filling the container */}
             <RiveComponent style={{ width: '100%', height: '100%' }} />
@@ -22,7 +21,6 @@ export default function InterviewPage() {
             <div className="ai-avatar">
               {/* Placeholder for AI Avatar */}
               <p>User Recording</p>
-            </div>
           </div>
         </div>
       </div>
