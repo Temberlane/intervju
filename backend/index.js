@@ -62,7 +62,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // === Mongoose Model ===
-const Form = require("../models/FormModel");
+const Form = require("./models/FormModel");
 
 // === Routes ===
 app.post("/submit", upload.single("resume"), async (req, res) => {
