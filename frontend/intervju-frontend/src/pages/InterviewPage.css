@@ -1,5 +1,3 @@
-
-
 .interview-wrapper {
   min-height: 100vh;
   background-color: var(--background, #f9fafb);
@@ -36,7 +34,7 @@
 .user-recording {
   width: 100%;
   height: 100%;
-  background-color: #d0d3ff; /* slightly darker purple */
+  background-color: rgb(244, 190, 83); /* Changed to specified color */
   border-radius: 8px;
   position: relative;
   display: flex;
@@ -123,7 +121,7 @@
 .user-recording {
   width: 100%;
   height: 100%;
-  background-color: #d0d3ff; /* slightly darker purple */
+  background-color: rgb(244, 190, 83); /* Changed to specified color */
   border-radius: 8px;
   position: relative;
   display: flex;
