@@ -1,27 +1,368 @@
-Embedded Software Developer Intern – Ciena
+toblerone
+tobleroneman
+Invisible
+spurhack
 
-Location:
-Ciena (e.g. Ottawa, Canada) – co-op/internship program
+iiDrip_Dropii — 2025-06-20, 3:54 PM
+Im at kitchener go rn
+Then laurier
+Then uw
+Raymond — 2025-06-20, 3:54 PM
+Okok
+iiDrip_Dropii — 2025-06-20, 4:07 PM
+ight im heew
+Raymond — 2025-06-20, 4:08 PM
+Cominggg
+stay where u are
+Okay wait where are u
+@iiDrip_Dropii
+bruh
+toblerone — 2025-06-20, 4:12 PM
+sheikh moment
+Raymond — 2025-06-20, 4:12 PM
+I will beat this man until no fluid remains inside him
+Sheikh please head to platform 4
+Please don’t tell me this man stopped at Laurier and thought it was Waterloo
+toblerone — 2025-06-20, 4:13 PM
+do u have his #
+Raymond — 2025-06-20, 4:14 PM
+This clown
+toblerone — 2025-06-20, 4:53 PM
+@here how close yall
+Raymond — 2025-06-20, 5:01 PM
+Uhhh almost
+toblerone — Yesterday at 2:03 AM
+https://github.com/users/Temberlane/projects/4
+for the kanban board/task tracking
+https://github.com/Temberlane/intervju the repo
+GitHub
+GitHub - Temberlane/intervju: Full-stack holistic AI job interviewi...
+Full-stack holistic AI job interviewing web app that helps users fully prepare for interviews across for multiple industries by incorporating the parts that aren&amp;#39;t fully captured in words. ...
+Full-stack holistic AI job interviewing web app that helps users fully prepare for interviews across for multiple industries by incorporating the parts that aren&#39;t fully captured in words. A mo...
+toblerone — Yesterday at 2:26 AM
+gemini api key
+AIzaSyAsmd9JzUMbv0AsjofU42gbghugv8K0ghU
+toblerone — Yesterday at 2:34 AM
+product idea
+Camera + Mic Input
+      ↓
+[Pose Estimation + Facial Recognition]  ← (MediaPipe / DeepFace)
+      ↓
+[Audio Features + Tone Detection]      ← (openSMILE / Whisper)
+      ↓
+[Transcription + Structured Input Generation]
+      ↓
+[Gemini 1.5 Pro / LLM Analysis + Response Generation]
+      ↓
+[Text or Synthesized Voice Output to Candidate]
+And for question generation -> look for current relevent information based on information provided by user such as field and resume and stuff?
+pose and audio generate flags that we can feed into gemini ? like a json 
+{
+  "transcript": "...",
+  "tone": "hesitant",
+  "gaze": "avoiding eye contact",
+  "expression": "nervous",
+  "posture": "slouched"
+}
+i guess transcription should be started and stopped by if the space bar is held? like a push to talk type deal?
+we sample tone every like 5 seconds like bunch it up so more precise feedback
+toblerone — Yesterday at 2:51 AM
+for .env 
+"
+GENAI_API_KEY=AIzaSyAsmd9JzUMbv0AsjofU42gbghugv8K0ghU
+"
+toblerone — Yesterday at 10:28 AM
+the tts key
+{
+  "type": "service_account",
+  "project_id": "peak-plating-454403-b9",
+  "private_key_id": "34e5b2632ced1e32342c844e11377d724592b080",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDPm+oNw5Oa/NmN\nrgFpuZY8FCQoqLFUCHMXIBn84rwXMppgUJVP6uddNyCrUG1DH7AABANibevifXCP\nfL9chayXYjJ362Y+UWrhjmvKdlt/7A9RN65A/QgNOtQ50fe3YH0SK7j2cQI+ZH9T\nNFrAi169S8/Y/k6GD6Zm5LU5RSh0VmU8REP4z8LMLrAoBtgGU4Alz7JRX8Oj+CRF\nvsj3ScLWh6rPNumgqRjbwXP15UFr3zIS0Fjy7e7XqRcPl3wQCTlXoc+IBVeNh/IK\ne3QoRoP/qV2dV0z3lsZ6zCoAfFoXeGO/fwwLGJnpO7LQ6etEBKq/3oaAqiYUSX5T\nEhwPOGuHAgMBAAECggEAGiz3UqrxBl6Q83sX9IOQvJxxfqreSNET6buDa04PFwGr\nUy910/CzIR6dQNxQGmF5aFcZMiTX0+Oq+HxrCDhWbXPVFyeX6Y2MY0n4rztDCBr0\nR3I0xz7f8AMV1QBzMiy5ODxJAtF2zfUP1KbKNnKcDFPtrddKgT6h5WE6tDDTC+/K\nfX3eX+i4KhNlLfNYjnLFjAZqOdsUQUw7I2XJZv3kOQsi71sOhPFAHzpkTgsXUPtU\nowoFCCRntzxNWuIjd0BN/FnOvvTmLVlQVMAtzl3YZpMBpCr62nrvTT/IT4gjij3g\n0FU3WvwkHWfwA7AMSCnMrmQMMew/GHzKGJFsMjguIQKBgQDwwb4WYvi4NKLLuckC\nrqsJBBUhNfE+zGjVs4s0ZSKH75JoXdqGuN3ajvFaRNshz7vPgOufIU/JbugT+0Kz\nFouuN2XTNowfjU6ac1CuOZfb5j2qPHvtXV2t/Jw1KcBQz9yw7eJsvCPZi/MU42BO\no1JMg7yYT+LPZqE1+Z/rGru5UQKBgQDcwOcnfSUU2msLRUx4zp3mnAONKgO46QSu\np/vZ0kabkQEYWs5+uhKHnk8rfhAPjyr8wNdPBUgFoiGQIeLDK0D3oj0w3sKUKcFE\nkNyuvcX2QKlgzqrDSV4v8LE5i8bA7Rkr+xhXTRzejexHcG6wmq8O0s3MLH1SwH9m\nY+7Ga7khVwKBgQCm4XSUaegDLyEE2/OUM2SErFrFGXHuWJv2PSyplcy4svwl8aBO\nsAe/vkNXkdDe//Ir5C3usJVwh7rAVvKl1mPdz7J6FB5OpJEuh+4NxggYOeDWhnRU\nVNphhm70fss6eMp9rXa8bjDfU52cBfu0poqeVNY+MWmC352xHyWVPoOO8QKBgG8a\nRzyAp6EPLMDHZ+2FT8M40jDB7I2r+UdOFFtUkWTKXhq72SG+1ISdEIt7LuolzCTZ\niYOjzNPI/ctkwpQnuNLpPJLUCmo3eaXgorDvoiqF8LlgSmFvE5BdO1UTHD0NF5Yj\nEeUeUmFQXJK3633G3ERBpIIWAh0b9QK7WPlUTiCRAoGBAIeImcAUlvdn2lxZjpSo\nf48J/lJ0kqHiNu6aE7n7Lhm41WGxSP2oDr8xZFgFfBpQjRRlNh1vksIh+TbzX4b1\n+0zC5eUu7phEl/icuTFk9DgfvAkqEUDpbp80YfhMw6XV7qlI3Tl2ZTO7yQ0cg16x\nMQMy2OhPej0O8Us+vhkM0mP/\n-----END PRIVATE KEY-----\n",
+  "client_email": "intervju@peak-plating-454403-b9.iam.gserviceaccount.com",
+Expand
+peak-plating-454403-b9-34e5b2632ced.json
+3 KB
+gonna be in gitignore
+toblerone — Yesterday at 2:02 PM
+Use vercel for frontend hosting, railway.app for backend
+iiDrip_Dropii — Yesterday at 2:23 PM
+use bingus for the memno hosting, bingos.tech for the scripmend
+toblerone — Yesterday at 2:28 PM
+we are live
+https://www.intervju.work/
+React App
+Web site created using create-react-app
+check it
+iiDrip_Dropii — Yesterday at 2:30 PM
+Image
+toblerone — Yesterday at 2:30 PM
+WHAT
+working for me
+Image
+iiDrip_Dropii — Yesterday at 2:31 PM
+he works on satelutes btw
+toblerone — Yesterday at 2:34 PM
+give it 60 minutes
+the dns servers need to resolve it
+iiDrip_Dropii — Yesterday at 3:30 PM
+works now
+toblerone — Yesterday at 8:52 PM
+Image
+toblerone — Yesterday at 9:17 PM
+Error: spawn python ENOENT
 
-Duration:
-Typically 4–8 months (e.g. starting September 2025)
+    at ChildProcess._handle.onexit (node:internal/child_process:284:19)
 
-Key Responsibilities:
-- Collaborate on the full embedded software lifecycle: design, code (C/C++), test and document real-time applications running on RTOS or Linux environments
-- Implement and maintain device drivers, kernel-space modules, and high-level state machines interfacing with hardware (ASICs, FPGAs)
-- Work with hardware specs, CPU timing diagrams, and debug tools (e.g., gdb) to resolve issues
-- Support fault/alarms subsystems, performance monitoring, and software development kits (SDKs)
-- Participate in code reviews, continuous integration (Git, Jenkins, Gerrit), and defect triage
+    at onErrorNT (node:internal/child_process:477:16)
 
-Preferred Skills & Qualifications:
-- Enrolled in Computer/Electrical Engineering or Computer Science degree
-- Proficiency in C and C++, with scripting languages (Python, Bash) as a plus
-- Familiarity with embedded operating systems (Linux, VxWorks) and real-time systems
-- Knowledge of networking protocols (Ethernet, TCP/IP, MPLS) and telecom concepts (WDM, OTN)
-- Experience with unit testing frameworks (Google Test, PyTest), debugging, and version control
-- Understanding of CPU architecture, hardware specs, timing diagrams, and hardware/software interfaces
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 
-Why Join Ciena?
-- Build software for carrier-grade networking systems (packet‑optical, hybrid switching architectures)
-- Contribute to real-world telecom solutions in high-performance, scalable networks
-- Join a collaborative, inclusive culture that values mentorship, ethical standards, and employee well-being
+Emitted 'error' event on ChildProcess instance at:
+
+    at ChildProcess._handle.onexit (node:internal/child_process:290:12)
+
+    at onErrorNT (node:internal/child_process:477:16)
+
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+
+  errno: -2,
+
+  code: 'ENOENT',
+
+  syscall: 'spawn python',
+
+  path: 'python',
+
+  spawnargs: [ 'VideoCapture.py' ]
+
+}
+Node.js v18.20.5
+
+npm error path /app
+
+npm error command failed
+
+npm error signal SIGTERM
+
+npm error command sh -c node index.js
+
+npm error A complete log of this run can be found in: /root/.npm/_logs/2025-06-22T01_03_40_618Z-debug-0.log
+
+npm warn config production Use --omit=dev instead.
+toblerone — 7:45 AM
+https://devpost.com/software/981012/joins/PFKS3WBA1X7PVzIkhxGRqw
+Raymond — 7:56 AM
+Attachment file type: acrobat
+Raymond_Li_Resume.pdf
+104.00 KB
+Job Posting: 419463 - Position: Junior IT Technician
+Co-op Work Term Posted: 2025 - Fall
+App Deadline 06/17/2025 09:00 AM
+Application Method: WaterlooWorks
+Posting Goes Live: 06/07/2025 09:00 AM
+Job Posting Status: Expired
+Company Information
+Organization Environment and Climate Change Canada
+Division Meteorological Service of Canada
+Job Posting Information
+Work Term 2025 - Fall
+Job Type Co-op Main
+Job Title Junior IT Technician
+Employer Internal Job Number Downsview
+Number of Job Openings 1
+Level Junior
+Region ON - Toronto
+Job - Address Line One 4905 Dufferin Street
+Job - City Toronto
+Job - Province/State Ontario
+Job - Postal/Zip Code M3H 5T4
+Job - Country Canada
+Employment Location
+Arrangement
+In-person
+Additional Employment Arrangement Location Information
+In person 5 days a week at 4905 Dufferin Street in Toronto, Ontario
+Work Term Duration 8 month consecutive work term required
+Special Work Term Start/End Date Considerations
+Double Work Term (8 Months)
+Fall 2025/Winter 2026- September 2, 2025 to April 30, 2026
+Special Job Requirements
+Hiring Preference Given to Canadian Citizens. Security Clearance required. Fingerprinting is required.
+Conditions of employment
+All employees of the core public administration are required to be fully vaccinated against COVID-19 and attest to their vaccination
+status unless accommodated based on a medical contraindication, religion, or another prohibited ground for discrimination as
+defined under the Canadian Human Rights Act.
+Students are responsible for ensuring they are eligible for an 8-month work term before applying. Please discuss your work/study
+sequence flexibility with your academic advisor as soon as possible.
+Job Summary
+About Environment and Climate Change Canada
+Environment and Climate Change Canada is the federal government department responsible for providing Canadians with a clean,
+safe and sustainable environment. We work to ensure that Canadians can live and prosper in an environment that is respected,
+protected and conserved. We provide Canadians with the information and tools needed to make responsible decisions about the
+environment, about weather and climatic conditions, and with regard to sustaining the environment for the benefit of present and
+future generations.
+Our mandate includes protecting and enhancing the natural environment, including water, air and soil quality. We also work to
+conserve Canada's renewable resources, such as plants and wildlife. We predict weather and monitor climate conditions. We
+protect Canada's water resources, working cooperatively with the United States to protect and conserve boundary waters.
+The student will be a member of the Corporate Services Branch (CSFB) - Service Desk and Distributed Computing Division team
+in Environment Canada's Downsview office. This office consists of over 1,000 clients working on-site, remotely, and located in
+offices across Ontario.
+Number of positions available: 1
+Duration of term of employment:
+Work term begins September 2, 2025 and ends April 30, 2026 - 8 Month consecutive work term
+Full time on-site only 8am to 4pm
+Location of work site:
+4905 Dufferin St.
+Toronto, Ontario
+M3H 5T4
+Job Responsibilities
+Essential Duties and Skills:
+The successful student's main responsibilities will consist of troubleshooting, installing and configuring new computers and all
+existing associated software by utilizing and updating the CSB incident management system. All team members are expected to
+participate in the maintenance and troubleshooting of Windows 10 related software on a daily basis. The work involves configuring
+the newest hardware and software to meet the computing needs of our user community.
+• Example applications include:
+•Security Software
+•Proprietary Government-Specific Software
+•All Microsoft Office 365 products
+•Latest Internet Access Tools
+•Virtual Private Network (VPN) Software
+In addition, students will be asked to provide videoconference/ Teams support, assist clients, support the Service Desk, process IT
+Asset lifecycle work and assist with the distribution of IT Assets as required.
+Non-Essential Duties and Activities:
+•Receive, log, assign, and escalate incident calls from clients within Axios Assyst system
+Monitor the Service Desk mailbox for email messages, respond to messages, and log reported incidents into Axios Assyst;
+redirect messages to deskside support consultants
+•
+•Monitor and track incidents for completion and resolution; report unresolved incidents to management
+•Follow proper Escalation protocols for handling incidents and track their resolution
+•Resolve incidents such as account lockouts, password changes, and account changes
+•Manage and maintain look-up lists and inventories, verify data integrity within IT Asset databases
+Environment Canada's Service Desk and Device Computing is committed in supporting the co-operative education program and
+invites students registered in a co-operative education program to apply. Each term, Environment Canada and Climate Change
+Canada hires many co-op students, so there are plenty of opportunities to meet other students.
+Required Skills
+Required Skills:
+• Strong oral and written communication
+•Computer hardware and software: trouble-shooting and installation
+•Customer service
+Transportation and Housing
+TTC bus stop located at front of 4905 Dufferin Street building.
+Parking $5 per day or $55 per month on premises.
+Additional Information Security Clearance Required
+Hiring Preference - Canadian
+fingerprinting required
+Compensation and Benefits
+To be discussed, based on level of academic semester completion.
+Application Information
+... (7 lines left)
+Collapse
+message.txt
+7 KB
+﻿
+Job Posting: 419463 - Position: Junior IT Technician
+Co-op Work Term Posted: 2025 - Fall
+App Deadline 06/17/2025 09:00 AM
+Application Method: WaterlooWorks
+Posting Goes Live: 06/07/2025 09:00 AM
+Job Posting Status: Expired
+Company Information
+Organization Environment and Climate Change Canada
+Division Meteorological Service of Canada
+Job Posting Information
+Work Term 2025 - Fall
+Job Type Co-op Main
+Job Title Junior IT Technician
+Employer Internal Job Number Downsview
+Number of Job Openings 1
+Level Junior
+Region ON - Toronto
+Job - Address Line One 4905 Dufferin Street
+Job - City Toronto
+Job - Province/State Ontario
+Job - Postal/Zip Code M3H 5T4
+Job - Country Canada
+Employment Location
+Arrangement
+In-person
+Additional Employment Arrangement Location Information
+In person 5 days a week at 4905 Dufferin Street in Toronto, Ontario
+Work Term Duration 8 month consecutive work term required
+Special Work Term Start/End Date Considerations
+Double Work Term (8 Months)
+Fall 2025/Winter 2026- September 2, 2025 to April 30, 2026
+Special Job Requirements
+Hiring Preference Given to Canadian Citizens. Security Clearance required. Fingerprinting is required.
+Conditions of employment
+All employees of the core public administration are required to be fully vaccinated against COVID-19 and attest to their vaccination
+status unless accommodated based on a medical contraindication, religion, or another prohibited ground for discrimination as
+defined under the Canadian Human Rights Act.
+Students are responsible for ensuring they are eligible for an 8-month work term before applying. Please discuss your work/study
+sequence flexibility with your academic advisor as soon as possible.
+Job Summary
+About Environment and Climate Change Canada
+Environment and Climate Change Canada is the federal government department responsible for providing Canadians with a clean,
+safe and sustainable environment. We work to ensure that Canadians can live and prosper in an environment that is respected,
+protected and conserved. We provide Canadians with the information and tools needed to make responsible decisions about the
+environment, about weather and climatic conditions, and with regard to sustaining the environment for the benefit of present and
+future generations.
+Our mandate includes protecting and enhancing the natural environment, including water, air and soil quality. We also work to
+conserve Canada's renewable resources, such as plants and wildlife. We predict weather and monitor climate conditions. We
+protect Canada's water resources, working cooperatively with the United States to protect and conserve boundary waters.
+The student will be a member of the Corporate Services Branch (CSFB) - Service Desk and Distributed Computing Division team
+in Environment Canada's Downsview office. This office consists of over 1,000 clients working on-site, remotely, and located in
+offices across Ontario.
+Number of positions available: 1
+Duration of term of employment:
+Work term begins September 2, 2025 and ends April 30, 2026 - 8 Month consecutive work term
+Full time on-site only 8am to 4pm
+Location of work site:
+4905 Dufferin St.
+Toronto, Ontario
+M3H 5T4
+Job Responsibilities
+Essential Duties and Skills:
+The successful student's main responsibilities will consist of troubleshooting, installing and configuring new computers and all
+existing associated software by utilizing and updating the CSB incident management system. All team members are expected to
+participate in the maintenance and troubleshooting of Windows 10 related software on a daily basis. The work involves configuring
+the newest hardware and software to meet the computing needs of our user community.
+• Example applications include:
+•Security Software
+•Proprietary Government-Specific Software
+•All Microsoft Office 365 products
+•Latest Internet Access Tools
+•Virtual Private Network (VPN) Software
+In addition, students will be asked to provide videoconference/ Teams support, assist clients, support the Service Desk, process IT
+Asset lifecycle work and assist with the distribution of IT Assets as required.
+Non-Essential Duties and Activities:
+•Receive, log, assign, and escalate incident calls from clients within Axios Assyst system
+Monitor the Service Desk mailbox for email messages, respond to messages, and log reported incidents into Axios Assyst;
+redirect messages to deskside support consultants
+•
+•Monitor and track incidents for completion and resolution; report unresolved incidents to management
+•Follow proper Escalation protocols for handling incidents and track their resolution
+•Resolve incidents such as account lockouts, password changes, and account changes
+•Manage and maintain look-up lists and inventories, verify data integrity within IT Asset databases
+Environment Canada's Service Desk and Device Computing is committed in supporting the co-operative education program and
+invites students registered in a co-operative education program to apply. Each term, Environment Canada and Climate Change
+Canada hires many co-op students, so there are plenty of opportunities to meet other students.
+Required Skills
+Required Skills:
+• Strong oral and written communication
+•Computer hardware and software: trouble-shooting and installation
+•Customer service
+Transportation and Housing
+TTC bus stop located at front of 4905 Dufferin Street building.
+Parking $5 per day or $55 per month on premises.
+Additional Information Security Clearance Required
+Hiring Preference - Canadian
+fingerprinting required
+Compensation and Benefits
+To be discussed, based on level of academic semester completion.
+Application Information
+Application Delivery WaterlooWorks
+Additional Application Information
+Items required after the interview if selected:
+The Original and a Photocopy of your citizenship
+Social Insurance Number
+Government Issued Photo Identification (IE: Driver's License, Passport, Canadian Citizenship) with current address.
