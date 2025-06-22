@@ -1,5 +1,5 @@
 import { useRive, useStateMachineInput } from '@rive-app/react-canvas';
-import TTSButton from "./TTSButton";
+import TTSButton from "../../../frontend/intervju-frontend/src/components/TTSButton";
 
 const STATE_MACHINE = "State Machine 1"; // adjust if your name is different
 

@@ -6,14 +6,14 @@ function TTSButton({ text, generateNew = false }) {
   const fetchQuestion = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("http://localhost:8000/generate-questions", {
+      const response = await fetch("https://intervju-production.up.railway.app/generate-questions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          resumePath: "Resume.pdf",
-          jobInfoPath: "Ciena_Embedded_Software_Internship.txt",
+          resumePath: "uploads/Resume.pdf",
+          jobInfoPath: "uploads/Ciena_Embedded_Software_Internship.txt",
           minutes: 30
         }),
       });
@@ -39,7 +39,7 @@ function TTSButton({ text, generateNew = false }) {
   };
 
   const handleSpeakText = async (textToSpeak) => {
-    const res = await fetch("http://localhost:8000/speak", {
+    const res = await fetch("https://intervju-production.up.railway.app/speak", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -68,7 +68,7 @@ function TTSButton({ text, generateNew = false }) {
 
   return (
     <button onClick={handleSpeak} disabled={isLoading}>
-      {isLoading ? "Loading..." : "🔊 Speak"}
+      {isLoading ? "Loading..." : (generateNew ? "🎯 Generate Question" : "🔊 Speak Text")}
     </button>
   );
 }
