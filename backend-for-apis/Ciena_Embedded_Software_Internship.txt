@@ -13,6 +13,7 @@ Key Responsibilities:
 - Support fault/alarms subsystems, performance monitoring, and software development kits (SDKs)
 - Participate in code reviews, continuous integration (Git, Jenkins, Gerrit), and defect triage
 
+
 Preferred Skills & Qualifications:
 - Enrolled in Computer/Electrical Engineering or Computer Science degree
 - Proficiency in C and C++, with scripting languages (Python, Bash) as a plus
