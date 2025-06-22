@@ -1,6 +1,6 @@
 {
     "build": {
-      "root": "intervju/backend"
+      "root": "backend"
     },
   "scripts": {
   "start": "node index.js"
