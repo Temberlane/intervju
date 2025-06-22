@@ -1,0 +1,6 @@
+{
+    "buildCommand": "cd frontend/intervju-frontend && npm install && npm run build",
+    "outputDirectory": "frontend/intervju-frontend/build",
+    "framework": "create-react-app",
+    "installCommand": "npm install"
+  }

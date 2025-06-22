@@ -8,3 +8,4 @@ pypi-json
 google-genai
 python-dotenv
 httpx
+google-generativeai
