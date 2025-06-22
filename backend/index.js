@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 5000;
 
 // stuff for the gen
 const { spawn } = require("child_process");
-const path = require("path");
+// const path = require("path");
 
 // Add this endpoint to your server.js
 app.post("/generate-questions", async (req, res) => {
