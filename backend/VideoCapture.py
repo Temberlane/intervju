@@ -12,7 +12,7 @@ class frameCapture:
     def __init__(self, maxDrop):
         isSlouched = False
         expression = ""
-        ultralyticsModel = YOLO("yolo11m-pose.pt")
+        ultralyticsModel = YOLO("../yolo11m-pose.pt")
         emotionalModel = HSEmotionRecognizer(model_name="enet_b0_8_best_afew")
         net = cv2.dnn.readNetFromCaffe("deploy.prototxt", "res10_300x300_ssd_iter_140000_fp16.caffemodel")
         BODY_NAMES = (
@@ -35,7 +35,7 @@ class frameCapture:
     def captureFrame(maxDrop):
         isSlouched = False
         expression = ""
-        ultralyticsModel = YOLO("yolo11m-pose.pt")
+        ultralyticsModel = YOLO("../yolo11m-pose.pt")
         emotionalModel = HSEmotionRecognizer(model_name="enet_b0_8_best_afew")
         net = cv2.dnn.readNetFromCaffe("deploy.prototxt", "res10_300x300_ssd_iter_140000_fp16.caffemodel")
         BODY_NAMES = (
