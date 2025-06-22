@@ -1,0 +1,28 @@
+Embedded Software Developer Intern – Ciena
+
+Location:
+Ciena (e.g. Ottawa, Canada) – co-op/internship program
+
+Duration:
+Typically 4–8 months (e.g. starting September 2025)
+
+Key Responsibilities:
+- Collaborate on the full embedded software lifecycle: design, code (C/C++), test and document real-time applications running on RTOS or Linux environments
+- Implement and maintain device drivers, kernel-space modules, and high-level state machines interfacing with hardware (ASICs, FPGAs)
+- Work with hardware specs, CPU timing diagrams, and debug tools (e.g., gdb) to resolve issues
+- Support fault/alarms subsystems, performance monitoring, and software development kits (SDKs)
+- Participate in code reviews, continuous integration (Git, Jenkins, Gerrit), and defect triage
+
+
+Preferred Skills & Qualifications:
+- Enrolled in Computer/Electrical Engineering or Computer Science degree
+- Proficiency in C and C++, with scripting languages (Python, Bash) as a plus
+- Familiarity with embedded operating systems (Linux, VxWorks) and real-time systems
+- Knowledge of networking protocols (Ethernet, TCP/IP, MPLS) and telecom concepts (WDM, OTN)
+- Experience with unit testing frameworks (Google Test, PyTest), debugging, and version control
+- Understanding of CPU architecture, hardware specs, timing diagrams, and hardware/software interfaces
+
+Why Join Ciena?
+- Build software for carrier-grade networking systems (packet‑optical, hybrid switching architectures)
+- Contribute to real-world telecom solutions in high-performance, scalable networks
+- Join a collaborative, inclusive culture that values mentorship, ethical standards, and employee well-being
